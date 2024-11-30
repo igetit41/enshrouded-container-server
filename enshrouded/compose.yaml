@@ -3,6 +3,7 @@ services:
   enshrouded:
     image: sknnr/enshrouded-dedicated-server:latest
     container_name: enshrouded
+    network_mode: "host"
     ports:
       - "15636:15636/udp"
       - "15637:15637/udp"
@@ -13,6 +14,7 @@ services:
       - QUERY_PORT=15637
       - SERVER_SLOTS=4
       - SERVER_IP=35.212.241.134
+#      - SERVER_IP=127.0.0.1
     volumes:
       - enshrouded-persistent-data:/home/steam/enshrouded/savegame
 
