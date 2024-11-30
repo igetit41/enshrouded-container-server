@@ -1,10 +1,10 @@
 #!/bin/bash
-export GITPATH=/home/d3f1l3/enshrouded-container-server/
-export GITSERVICEPATH=enshrouded/
+export GITPATH=/home/d3f1l3/enshrouded-container-server
+export GITSERVICEPATH=$GITPATH/enshrouded
 
-git -C ${$GITPATH} reset --hard
-git -C ${$GITPATH} pull origin main
-chmod +x ${$GITPATH}${$GITSERVICEPATH}enshrouded.sh
-cp ${$GITPATH}${$GITSERVICEPATH}enshrouded.service /etc/systemd/system/enshrouded.service
+git -C $GITPATH reset --hard
+git -C $GITPATH pull origin main
+chmod +x $GITSERVICEPATH/enshrouded.sh
+cp $GITSERVICEPATH/enshrouded.service /etc/systemd/system/enshrouded.service
 
-docker compose --file ${$GITPATH}${$GITSERVICEPATH}compose.yaml up -d
+docker compose --file $GITSERVICEPATH/compose.yaml up -d
