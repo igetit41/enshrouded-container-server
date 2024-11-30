@@ -29,5 +29,6 @@ sudo chmod +x ~/enshrouded-container-server/enshrouded/enshrouded.sh
 
 sudo cp ~/enshrouded-container-server/enshrouded/enshrouded.service /etc/systemd/system/enshrouded.service
 
+sudo systemctl daemon-reload
 sudo systemctl enable enshrouded
 sudo systemctl restart enshrouded
