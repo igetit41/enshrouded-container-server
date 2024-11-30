@@ -38,3 +38,10 @@ sudo systemctl restart enshrouded
 
 tail -100  /var/log/syslog | grep enshrouded
 sudo docker logs enshrouded
+
+docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml up -d
+docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml ps
+
+
+docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml down
+sudo poweroff

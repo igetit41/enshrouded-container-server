@@ -5,8 +5,12 @@ services:
     container_name: enshrouded
     network_mode: "host"
     ports:
+      - "15636:15636/tcp"
       - "15636:15636/udp"
+      - "15637:15637/tcp"
       - "15637:15637/udp"
+      - "27015:27015/tcp"
+      - "27015:27015/udp"
     environment:
       - SERVER_NAME=enshroudmybutt
       - SERVER_PASSWORD=groovyfunky
