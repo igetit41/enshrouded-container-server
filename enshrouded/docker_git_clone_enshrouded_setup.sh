@@ -24,11 +24,14 @@ newgrp docker
 
 # Clone Repo
 cd ~
-git clone https://github.com/igetit41/enshrouded-container-server
+#git clone https://github.com/igetit41/enshrouded-container-server
+sudo git -C ~/enshrouded-container-server reset --hard
+sudo git -C ~/enshrouded-container-server pull origin main
+
 sudo chmod +x ~/enshrouded-container-server/enshrouded/enshrouded.sh
 
 sudo cp ~/enshrouded-container-server/enshrouded/enshrouded.service /etc/systemd/system/enshrouded.service
 
 sudo systemctl daemon-reload
-sudo systemctl enable enshrouded
+#sudo systemctl enable enshrouded
 sudo systemctl restart enshrouded
