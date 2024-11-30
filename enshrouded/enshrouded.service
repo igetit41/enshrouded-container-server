@@ -1,0 +1,11 @@
+[Unit]
+Description=enshrouded
+
+[Service]
+User=root
+WorkingDirectory=/home/josterhaus/enshrouded-container-server/enshrouded
+ExecStart=/home/josterhaus/enshrouded-container-server/enshrouded/enshrouded.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
