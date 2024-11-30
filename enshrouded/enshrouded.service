@@ -4,7 +4,7 @@ Description=enshrouded
 [Service]
 User=root
 WorkingDirectory=/home/d3f1l3/enshrouded-container-server/enshrouded
-ExecStart=/home/d3f1l3/enshrouded-container-server/enshrouded/enshrouded.sh
+ExecStart=./enshrouded.sh
 Restart=on-failure
 
 [Install]

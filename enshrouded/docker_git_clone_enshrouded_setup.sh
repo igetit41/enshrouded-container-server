@@ -35,3 +35,6 @@ sudo cp ~/enshrouded-container-server/enshrouded/enshrouded.service /etc/systemd
 sudo systemctl daemon-reload
 #sudo systemctl enable enshrouded
 sudo systemctl restart enshrouded
+
+tail -100  /var/log/syslog | grep enshrouded
+sudo docker logs enshrouded
