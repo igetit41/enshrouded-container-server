@@ -25,8 +25,9 @@ newgrp docker
 # Clone Repo
 cd ~
 #git clone https://github.com/igetit41/enshrouded-container-server
-sudo git -C ~/enshrouded-container-server reset --hard
-sudo git -C ~/enshrouded-container-server pull origin main
+#sudo git config --global --add safe.directory /home/d3f1l3/enshrouded-container-server
+git -C ~/enshrouded-container-server reset --hard
+git -C ~/enshrouded-container-server pull origin main
 
 sudo chmod +x ~/enshrouded-container-server/enshrouded/enshrouded.sh
 
@@ -39,9 +40,9 @@ sudo systemctl restart enshrouded
 tail -100  /var/log/syslog | grep enshrouded
 sudo docker logs enshrouded
 
-docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml up -d
-docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml ps
+sudo docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml up -d
+sudo docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml ps
 
 
-docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml down
+sudo docker compose --file /home/d3f1l3/enshrouded-container-server/enshrouded/compose.yaml down
 sudo poweroff
