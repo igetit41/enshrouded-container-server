@@ -12,7 +12,7 @@ services:
       - "27015:27015/tcp"
       - "27015:27015/udp"
     environment:
-      - SERVER_NAME=channel27
+      - SERVER_NAME=chan27
       - SERVER_PASSWORD=groovyfunky
       - GAME_PORT=15636
       - QUERY_PORT=15637

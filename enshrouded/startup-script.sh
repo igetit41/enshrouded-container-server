@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GITPATH=/home/d3f1l3/enshrouded-container-server
+GITPATH=/home/d3f1l3/enshrouded-container-server
 
 sudo git config --global --add safe.directory '*'
 
@@ -13,7 +13,6 @@ sudo cp $GITPATH/enshrouded/enshrouded.service /etc/systemd/system/enshrouded.se
 
 sudo systemctl daemon-reload
 sudo systemctl restart enshrouded
-
 
 # Define the server port
 SERVER_PORT=15636
@@ -33,7 +32,7 @@ COUNT=0
 # Main loop
 while true; do
     # Check the number of established connections on the server port
-    PID=$(docker inspect -f '{{.State.Pid}}' $CONTAINER)
+    PID=$(sudo docker inspect -f '{{.State.Pid}}' $CONTAINER)
     CONNECTIONS=$(sudo nsenter -t $PID -n netstat | grep -w $SERVER_PORT | grep ESTABLISHED | wc -l)
     STAMP=$(date +'%Y-%m-%d:%H.%M:%S')
     echo "STARTUPLOG-$STAMP-CONNECTIONS: $CONNECTIONS"
