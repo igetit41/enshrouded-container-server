@@ -2,7 +2,7 @@ version: '3'
 services:
   enshrouded:
     image: sknnr/enshrouded-dedicated-server:latest
-    container_name: enshrouded
+    container_name: enshrouded_chan_27
     network_mode: "host"
     ports:
       - "15636:15636/tcp"
