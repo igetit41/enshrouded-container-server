@@ -2,7 +2,7 @@ version: '3'
 services:
   enshrouded:
     image: sknnr/enshrouded-dedicated-server:latest
-    container_name: enshrouded_chan_27
+    container_name: enshrouded
     network_mode: "host"
     ports:
       - "15636:15636/tcp"
@@ -12,14 +12,14 @@ services:
       - "27015:27015/tcp"
       - "27015:27015/udp"
     environment:
-      - SERVER_NAME=chan_27
+      - SERVER_NAME=channel27
       - SERVER_PASSWORD=groovyfunky
       - GAME_PORT=15636
       - QUERY_PORT=15637
       - SERVER_SLOTS=4
       - SERVER_IP=0.0.0.0
     volumes:
-      - enshrouded-persistent-data:/home/steam/enshrouded/savegame
+      - enshrouded-persistent-data:/home/steam/enshrouded/savegame_channel27
 
 volumes:
   enshrouded-persistent-data:
