@@ -17,7 +17,7 @@ services:
       - GAME_PORT=15636
       - QUERY_PORT=15637
       - SERVER_SLOTS=4
-      - SERVER_IP=0.0.0.0
+      - SERVER_IP=35.212.241.134
     volumes:
       - enshrouded-persistent-data:/home/steam/enshrouded/savegame
 
